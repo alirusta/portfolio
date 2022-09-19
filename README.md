@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio - PLEASE VIEW WITH FIREFOX, AS CHROME FOR SOME REASON IGNORES THE BACKDROP BLUR FOR MY CARD-CONTAINER!
  # Directions and Layouts:
  ## Fonts:
 - **Eagle Lake** to accentuate name.
