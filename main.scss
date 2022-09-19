@@ -381,24 +381,52 @@ body {
                 }
 
                 h1 {
-                    font-size: 3.5rem;
+                    font-size: 6.5vw;
                 }
 
                 h3 {
-                    font-size: 2.5rem;
+                    font-size: 5.5vw;
+                }
+
+                @media (max-width: 450px) {
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                    h3 {
+                        font-size: 2rem;
+                    }
+                }
+
+                @media (min-width: 900px) {
+                    h1 {
+                        font-size: 6.5rem;
+                    }
+
+                    h3 {
+                        font-size: 5.5rem;
+                    }
                 }
 
                 p {
                     font-family: $roboto;
                     line-height: 180%;
-                    font-size: 1.8rem;
+                    font-size: 1.9rem;
 
                     .fa-brands {
-                        font-size: 8vw;
+                        font-size: 7.5vw;
                         padding: 0 5px;
+                    }
 
-                        @media (min-width: 500){
+                    @media (max-width: 450px) {
+                        .fa-brands {
+                            font-size: 4rem;
+                        }
+                    }
 
+                    @media (min-width: 1320px) {
+                        .fa-brands {
+                            font-size: 10rem;
                         }
                     }
 

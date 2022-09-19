@@ -340,19 +340,45 @@ body .profile-card-container .card .card-content h3 {
   margin-bottom: 15px;
 }
 body .profile-card-container .card .card-content h1 {
-  font-size: 3.5rem;
+  font-size: 6.5vw;
 }
 body .profile-card-container .card .card-content h3 {
-  font-size: 2.5rem;
+  font-size: 5.5vw;
+}
+@media (max-width: 450px) {
+  body .profile-card-container .card .card-content h1 {
+    font-size: 3rem;
+  }
+  body .profile-card-container .card .card-content h3 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 900px) {
+  body .profile-card-container .card .card-content h1 {
+    font-size: 6.5rem;
+  }
+  body .profile-card-container .card .card-content h3 {
+    font-size: 5.5rem;
+  }
 }
 body .profile-card-container .card .card-content p {
   font-family: "Roboto", sans-serif;
   line-height: 180%;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 body .profile-card-container .card .card-content p .fa-brands {
-  font-size: 8vw;
+  font-size: 7.5vw;
   padding: 0 5px;
+}
+@media (max-width: 450px) {
+  body .profile-card-container .card .card-content p .fa-brands {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1320px) {
+  body .profile-card-container .card .card-content p .fa-brands {
+    font-size: 10rem;
+  }
 }
 body .profile-card-container .card .card-content p .fa-html5 {
   color: orange;
