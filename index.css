@@ -264,10 +264,11 @@ body .top-nav #menu-toggle:checked + .menu-button-container .menu-button::after 
   }
 }
 body .profile-card-container {
-  width: 50%;
-  margin: 50px auto;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0;
   opacity: 0;
   -webkit-animation: fadeIn-trans-up 1.5s 0.5s forwards;
           animation: fadeIn-trans-up 1.5s 0.5s forwards;
@@ -296,6 +297,9 @@ body .profile-card-container .card {
   min-width: 300px;
   min-height: 350px;
   box-shadow: 0 0 13px 8px rgba(0, 0, 0, 0.6), inset 1px 1px 3.5px 2px rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin: 0 50px;
   border-radius: 10px;
 }
 body .profile-card-container .card .card-content {
@@ -395,4 +399,4 @@ body .profile-card-container .card .card-content p .fa-bootstrap {
 body .profile-card-container .card .card-content p span {
   font-weight: bold;
   text-shadow: 0 0 3px white;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=index.css.map */
