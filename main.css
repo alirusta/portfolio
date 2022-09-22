@@ -264,11 +264,10 @@ body .top-nav #menu-toggle:checked + .menu-button-container .menu-button::after 
   }
 }
 body .profile-card-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
+  width: 50%;
+  margin: 50px auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   opacity: 0;
   -webkit-animation: fadeIn-trans-up 1.5s 0.5s forwards;
           animation: fadeIn-trans-up 1.5s 0.5s forwards;
@@ -296,9 +295,6 @@ body .profile-card-container {
 body .profile-card-container .card {
   min-width: 300px;
   min-height: 350px;
-  margin: 0 50px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 0 13px 8px rgba(0, 0, 0, 0.6), inset 1px 1px 3.5px 2px rgba(255, 255, 255, 0.76);
   border-radius: 10px;
 }

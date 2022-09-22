@@ -326,21 +326,16 @@ body {
     // PROFILE-CARD START
 
     .profile-card-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 50px 0;
-        //backdrop-filter: blur(10px);
+        width: 50%;
+        margin: 50px auto;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         opacity: 0;
         @include fadeUp;
 
         .card {
             min-width: 300px;
             min-height: 350px;
-            margin: 0 50px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             box-shadow: $true-glassmorph;
             border-radius: 10px;
 
