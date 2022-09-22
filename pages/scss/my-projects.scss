@@ -17,7 +17,7 @@ sans-serif;
 $glow: 0 0 3px white;
 
 $true-glassmorph: 0 0 13px 8px rgba(0, 0, 0, 0.6),
-inset 1px 1px 3.5px 2px rgba(255, 255, 255, 0.76);
+inset 1px 1px 3px 2px rgb(255, 255, 255);
 
 $true-glassmorph-less-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.65),
 inset 1px 1px 3.5px 2px rgba(255, 255, 255, 0.76);
@@ -335,21 +335,22 @@ body {
 
     // PROJECT CARDS START
     .container {
-        max-width: 1500px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 40px;
+        grid-gap: 35px;
+        max-width: 1500px;
         margin: 110px auto;
         padding: 40px 0;
+        opacity: 0;
+        @include fadeUp;
 
         .card {
             position: relative;
             width: 300px;
             height: 400px;
             margin: 0 auto;
-            background: #000;
             border-radius: 15px;
-            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: $true-glassmorph;
 
             .face {
                 position: absolute;
@@ -367,7 +368,7 @@ body {
                 }
 
                 &.face2 {
-                    transition: 0.5s;
+                    transition: .5s;
 
                     h2 {
                         margin: 0;
@@ -376,9 +377,9 @@ body {
                         font-family: $montserrat;
                         font-weight: 800;
                         text-align: center;
-                        color: #fff;
+                        color: white;
                         transition: 0.5s;
-                        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                        text-shadow: 2px 2px 3px black, $glow;
                         z-index: 10;
                     }
                 }
@@ -387,37 +388,23 @@ body {
 
         img {
             border-radius: 15px;
+            opacity: .75;
         }
 
         .card:hover .face.face2 {
             height: 60px;
 
             h2 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
         }
 
-        .card:nth-child(1) .face.face2 {
-            background-image: linear-gradient(40deg,
-                    #fffc00 0%,
-                    #fc00ff 45%,
-                    #00fffc 100%);
-            border-radius: 15px;
-        }
-
-        .card:nth-child(2) .face.face2 {
-            background-image: linear-gradient(40deg,
-                    #fc00ff 0%,
-                    #00fffc 45%,
-                    #fffc00 100%);
-            border-radius: 15px;
-        }
-
-        .card:nth-child(3) .face.face2 {
-            background-image: linear-gradient(40deg,
-                    #00fffc 0%,
-                    #fc00ff 45%,
-                    #fffc00 100%);
+        .card .face.face2 {
+            border-top: 1.5px solid white;
+            border-bottom: 1.5px solid white;
+            background: transparent;
+            backdrop-filter: blur(15px);
+            box-shadow: $glow, $glassmorph;
             border-radius: 15px;
         }
     }
