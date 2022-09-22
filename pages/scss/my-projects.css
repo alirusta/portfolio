@@ -13,7 +13,6 @@
 
 body {
   width: 100vw;
-  height: 100vh;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   background-attachment: fixed;
@@ -59,7 +58,7 @@ body {
   }
 }
 body .bg-img {
-  background: url(/images/coding-laptop-1.jpg) center/cover no-repeat;
+  background: url(/images/AdobeStock_299089632.jpeg) center/cover no-repeat;
   width: 100%;
   height: 100%;
   opacity: 0.5;
@@ -74,13 +73,13 @@ body .top-nav {
   position: fixed;
   width: 100%;
   top: 0;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px) !important;
+          backdrop-filter: blur(10px) !important;
+  opacity: 0;
   z-index: 100;
   height: 100px;
   padding: 2.5em;
   box-shadow: inset 0 11px 8px -6px rgba(255, 255, 255, 0.76), inset 0 -11px 8px -6px rgba(255, 255, 255, 0.76), 2px 2px 15px 10px rgba(0, 0, 0, 0.5);
-  opacity: 0;
   -webkit-animation: fadeIn-trans-down 1.5s 0.5s forwards;
           animation: fadeIn-trans-down 1.5s 0.5s forwards;
 }
@@ -92,6 +91,8 @@ body .top-nav {
   100% {
     opacity: 1;
     transform: translateY(0);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
   }
 }
 @keyframes fadeIn-trans-down {
@@ -102,6 +103,8 @@ body .top-nav {
   100% {
     opacity: 1;
     transform: translateY(0);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
   }
 }
 body .top-nav #logo {
