@@ -22,6 +22,9 @@ inset 1px 1px 3.5px 2px rgba(255, 255, 255, 0.76);
 $true-glassmorph-less-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.65),
 inset 1px 1px 3.5px 2px rgba(255, 255, 255, 0.76);
 
+$glassmorph-nav: inset 0 11px 8px -6px rgba(255, 255, 255, 0.76),
+inset 0 -11px 8px -6px rgba(255, 255, 255, 0.76);
+
 $glassmorph: inset 0 11px 8px -6px rgba(255, 255, 255, 0.76),
 inset 0 -11px 8px -6px rgba(255, 255, 255, 0.76);
 
@@ -32,7 +35,9 @@ $glassmorph-top: inset 0 11px 8px -6px rgba(255, 255, 255, 0.726);
 
 $glassmorph-bottom: inset 0 -11px 8px -6px rgba(255, 255, 255, 0.726);
 
-$simple-shadow: 2px 2px 15px 10px rgba(0, 0, 0, 0.5);
+$simple-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.5);
+
+$simple-shadow-nav: 2px 2px 15px 10px rgba(0, 0, 0, 0.5);
 
 //TIMELINE VARIABLES
 
@@ -90,6 +95,7 @@ body {
     background-size: 400% 400%;
     background-attachment: fixed;
     animation: gradient 20s ease-in-out infinite, fadeIn 2s;
+    overflow: hidden;
 
     @keyframes gradient {
         0% {
@@ -137,7 +143,7 @@ body {
         z-index: 100;
         height: 100px;
         padding: 2.5em;
-        box-shadow: $glassmorph, $simple-shadow;
+        box-shadow: $glassmorph-nav, $simple-shadow-nav;
         opacity: 0;
         @include fadeDown;
 
@@ -333,4 +339,252 @@ body {
 
     // DROP DOWN MENU END
     // NAVIGATION END
+
+    // CONTACT FORM START
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 180px auto 0;
+
+        .color {
+            position: absolute;
+            filter: blur(150px);
+
+            &:nth-child(1) {
+                top: -350px;
+                width: 600px;
+                height: 600px;
+                background: rgb(0, 255, 186, 0.55);
+            }
+
+            &:nth-child(2) {
+                bottom: -150px;
+                left: 100px;
+                width: 500px;
+                height: 500px;
+                background: rgb(255, 253, 135, 0.55);
+            }
+
+            &:nth-child(3) {
+                bottom: 50px;
+                right: 100px;
+                width: 400px;
+                height: 400px;
+                background: rgb(191, 0, 255, 0.55)
+            }
+        }
+
+        // ANIMATED SQUARES START
+        .box {
+            position: relative;
+
+            .square {
+                position: absolute;
+                backdrop-filter: blur(5px);
+                box-shadow: $glow, $glassmorph, $simple-shadow;
+                border-top: 1px solid rgba(255, 255, 255, 0.9);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+                border-left: 1px solid rgb(255, 255, 255, 0.5);
+                border-right: 1px solid rgb(255, 255, 255, 0.5);
+                border-radius: 10px;
+                background: rgb(255, 255, 255, 0.1);
+                // NEGATIVE DELAY DIVERSIFIES SQUARE ANIMATION WITHOUT FORWARDED DELAY
+                animation: animate 10s linear infinite;
+                animation-delay: calc(-1s * var(--i));
+
+                &:nth-child(1) {
+                    top: -50px;
+                    right: -60px;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                &:nth-child(2) {
+                    top: 150px;
+                    left: -100px;
+                    width: 120px;
+                    height: 120px;
+                    z-index: 2;
+                }
+
+                &:nth-child(3) {
+                    bottom: 50px;
+                    right: -60px;
+                    width: 80px;
+                    height: 80px;
+                    z-index: 2;
+                }
+
+                &:nth-child(4) {
+                    bottom: -80px;
+                    left: 100px;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                &:nth-child(5) {
+                    top: -80px;
+                    left: 100px;
+                    width: 60px;
+                    height: 60px;
+                }
+
+                @keyframes animate {
+
+                    // ANIMATION STARTS WITH A -40PX OFFSET AT 0%
+                    0%,
+                    100% {
+                        transform: translateY(-40px);
+                    }
+
+                    // TRANSITIONS 40PX TOWARDS ORIGIN FOR 50% OF THE OFFSET AT 0%
+                    50% {
+                        transform: translateY(40px);
+                    }
+                }
+            }
+        }
+
+        // ANIMATED SQUARES END
+
+        .container {
+            position: relative;
+            width: 400px;
+            min-height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(7px);
+            box-shadow: $glow, $true-glassmorph;
+            border: 1px solid rgb(255, 255, 255, 0.5);
+            border-right: 1px solid rgb(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+            opacity: 0;
+            @include fadeUp;
+
+            .form {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding: 40px;
+            }
+
+            .form h2 {
+                position: relative;
+                font-family: $montserrat;
+                color: white;
+                text-shadow: $glow;
+                font-size: 4.8rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .form .input-box {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .form .input-box input {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.2);
+                border: none;
+                outline: none;
+                padding: 10px 20px;
+                border-radius: 35px;
+                border: 1px solid rgb(255, 255, 255, 0.5);
+                border-right: 1px solid rgb(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: white;
+                box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3), $glow;
+            }
+
+            .form .input-box textarea {
+                width: 315px;
+                height: 140px;
+                resize: none;
+                background: rgba(255, 255, 255, 0.2);
+                border: none;
+                outline: none;
+                padding: 10px 20px;
+                border-radius: 15px;
+                border: 1px solid rgb(255, 255, 255, 0.5);
+                border-right: 1px solid rgb(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: white;
+                box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3), $glow;
+            }
+
+            .form .input-box input::placeholder {
+                font-family: $comfortaa;
+                text-shadow: $glow;
+                font-weight: 800;
+                color: white;
+            }
+
+            .form .input-box textarea::placeholder {
+                font-family: $comfortaa;
+                font-weight: 800;
+                text-shadow: $glow;
+                color: white;
+            }
+
+            .form .input-box input[type="submit"] {
+                background: white;
+                font-family: $comfortaa;
+                text-shadow: $glow;
+                color: rgba(0, 0, 0, 0.6);
+                max-width: 150px;
+                cursor: pointer;
+                margin-bottom: 20px;
+                margin-left: 80px;
+                font-weight: 800;
+                transition: .5s ease-in-out;
+            }
+
+            .form .input-box input[type="submit"]:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: #fff;
+                font-weight: 600;
+            }
+
+            .text {
+                margin-top: 5px;
+                font-family: $comfortaa;
+                font-weight: 900;
+                font-size: 1.7rem;
+                line-height: 165%;
+                color: #fff;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+
+                .fa-face-laugh-wink,
+                .fa-linkedin {
+                    font-size: 2rem;
+                }
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+
+                    &:active {
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    // CONTACT FORM END
 }

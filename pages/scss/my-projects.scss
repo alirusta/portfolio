@@ -339,7 +339,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 35px;
         max-width: 1500px;
-        margin: 110px auto;
+        margin: 110px auto 0;
         padding: 40px 0;
         opacity: 0;
         @include fadeUp;

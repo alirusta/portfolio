@@ -267,7 +267,7 @@ body .top-nav #menu-toggle:checked + .menu-button-container .menu-button::after 
 body .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 140px auto;
+  margin: 140px auto 0;
 }
 body .timeline input[type=checkbox] {
   display: none;

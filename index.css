@@ -268,7 +268,7 @@ body .profile-card-container {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 50px 0;
+  margin: 50px auto 0;
   opacity: 0;
   -webkit-animation: fadeIn-trans-up 1.5s 0.5s forwards;
           animation: fadeIn-trans-up 1.5s 0.5s forwards;
