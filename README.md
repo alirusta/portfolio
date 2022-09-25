@@ -1,26 +1,35 @@
 # Portfolio - PLEASE VIEW WITH FIREFOX, AS CHROME FOR SOME REASON IGNORES THE BACKDROP BLUR FOR MY CARD-CONTAINER!
  # Directions and Layouts:
  ## Fonts:
-- **Eagle Lake** to accentuate name.
-- **Montserrat** for landing page summary.
+- **Montserrat** for headers and titles.
 - **Roboto** for everything else.
 - **Condiment** as logo.
-- **Comfortaa** for nav-elements. 
+- **Comfortaa** for nav- and form-elements. 
 ## Layout:
 ### Mobile:
 - One column, everything vertically-centered.
 - Collapsed nav-bar.
-### Tablet:
-- Two columns, One for text, one for iframes of current work.
-- Uncollapsed nav-bar.
  ### Desktop:
-- Three columns. One for text, two for iframes of current work.
-- Wide nav-bar with logo positioned left and nav-elements right.
+- Widen everything horizontally. Except form-page, leave as is.
+- Three columns for projects, which collapses into two columns for tablet and one for mobile.
 # General Ideas:
- ## Landing Page:
-- Spaceous landing page, creating a feeling of vastness and infinite possibilites for the viewer.
-- Animated background purely through code for eye-candy purposes and display of knowledge.
+## GLASSMORPHISM WITH COLORFUL GRADIENT-BGs ON ALL PAGES
+### ANIMATIONS MUST BE COHERENT WITH DESIGN AND LAYOUT
+### SHOULD NOT DIFFER TOO MUCH FROM ANOTHER AS THAT WOULD BREAK THE COHESIVE OVERALL DEISGN
+ ### Landing Page:
+- Animations and color gradients for eye-candy and aesthetics. Brief introduction of myself and my skills.
 - Effects on the summary text and name for further eye-candy purposes.
 ### Colors:
-- Nothing too bright to hurt the eyes. A gradient loop perhaps? Particles following your cursor?
-- Gradient loop inside logo on nav-bar, around the font. 
+- Nothing too bright to hurt the eyes. A gradient loop perhaps?
+### About me Page:
+- Timeline without a "line"
+- Rough summary of my experiences and works so far.
+- Fluid animation upon entry on page.
+
+### My projects Page:
+- Three cards with a "veiling" animation, resembling glass covering up the card, blurring everything
+- Upon hover the "glass" rolls down and turns into a card-title, reveiling the content behind it.
+
+### Contact me Page:
+- Simple contact-form coherently designed in a glassmorphic way.
+- Added simple animations for eye-candy and to make the bland page more lively.
