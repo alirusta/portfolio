@@ -1,4 +1,7 @@
-# Portfolio - PLEASE VIEW WITH FIREFOX, AS CHROME FOR SOME REASON IGNORES THE BACKDROP BLUR FOR MY CARD-CONTAINER!
+# Portfolio - PLEASE VIEW WITH FIREFOX, AS CHROME IGNORES THE BACKDROP BLUR FOR CARD-CONTAINER!
+- Any and all attemptps to resolve this incompability with webkits and whatnot have not yielded any fruit. My teachers and mentors were also unable to resolve this problem. So we settled with just firefox for now.
+- The project cards were originally i-frames, but these i-frames also caused ominous issues with the backdrop blur, this time the overall blur would magically turn off if I included the third i-frame, meaning that firefox was okay with 2 i-frames but when I added a third i-frame element the blur would peace out for no reason. This problem was also unsolvable as neither extended google research nor my mentors and teachers who forked my portfolio repo could do anything to solve this.
+- My teachers and peers agreed with me that using SCSS is permissible and does not count as a framework or new technology.
  # Directions and Layouts:
  ## Fonts:
 - **Montserrat** for headers and titles.

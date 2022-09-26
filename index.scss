@@ -379,6 +379,15 @@ body {
 
                 h1 {
                     font-size: 6.5vw;
+
+                    a {
+                        text-decoration: none;
+                        color: currentColor;
+
+                        &:hover {
+                            text-shadow: $glow;
+                        }
+                    }
                 }
 
                 h3 {

@@ -346,6 +346,13 @@ body .profile-card-container .card .card-content h3 {
 body .profile-card-container .card .card-content h1 {
   font-size: 6.5vw;
 }
+body .profile-card-container .card .card-content h1 a {
+  text-decoration: none;
+  color: currentColor;
+}
+body .profile-card-container .card .card-content h1 a:hover {
+  text-shadow: 0 0 3px white;
+}
 body .profile-card-container .card .card-content h3 {
   font-size: 5.5vw;
 }

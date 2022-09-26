@@ -433,24 +433,7 @@ body section .container .form .input-box input {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 3px white;
-}
-body section .container .form .input-box textarea {
-  width: 315px;
-  height: 140px;
-  resize: none;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  outline: none;
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
+  font-size: 1.7rem;
   letter-spacing: 1px;
   color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 3px white;
@@ -473,6 +456,40 @@ body section .container .form .input-box input::placeholder {
   font-weight: 800;
   color: white;
 }
+body section .container .form .input-box input[type=submit] {
+  background: white;
+  font-family: "Comfortaa", cursive;
+  text-shadow: 0 0 3px white;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 150px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  font-weight: 800;
+  transition: 0.3s ease-in-out;
+}
+body section .container .form .input-box input[type=submit]:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+}
+body section .container .form .input-box textarea {
+  width: 315px;
+  height: 140px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 3px white;
+}
 body section .container .form .input-box textarea::-moz-placeholder {
   font-family: "Comfortaa", cursive;
   font-weight: 800;
@@ -490,23 +507,6 @@ body section .container .form .input-box textarea::placeholder {
   font-weight: 800;
   text-shadow: 0 0 3px white;
   color: white;
-}
-body section .container .form .input-box input[type=submit] {
-  background: white;
-  font-family: "Comfortaa", cursive;
-  text-shadow: 0 0 3px white;
-  color: rgba(0, 0, 0, 0.6);
-  max-width: 150px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  margin-left: 80px;
-  font-weight: 800;
-  transition: 0.5s ease-in-out;
-}
-body section .container .form .input-box input[type=submit]:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-weight: 600;
 }
 body section .container .text {
   margin-top: 5px;
@@ -530,4 +530,68 @@ body section .container .text a:active {
 }
 body section .container .text a:hover {
   text-decoration: underline;
+}
+@media (max-width: 400px) {
+  body section .container {
+    width: 300px;
+  }
+  body section .container .form {
+    padding: 15px;
+  }
+  body section .container .form h2 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+  body section .container .form .input-box {
+    margin-top: 15px;
+  }
+  body section .container .form .input-box input {
+    font-size: 1.5rem;
+  }
+  body section .container .form .input-box input[type=submit] {
+    margin-bottom: 2px;
+    margin-left: 58px;
+  }
+  body section .container .form .input-box textarea {
+    width: 100%;
+    height: 120px;
+    font-size: 1.5rem;
+  }
+  body section .container .text {
+    font-size: 1.2rem;
+  }
+  body section .container .text .fa-face-laugh-wink,
+body section .container .text .fa-linkedin {
+    margin-top: 2px;
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1000px) {
+  body section .container {
+    width: 900px;
+  }
+  body section .container .form h2 {
+    font-size: 7rem;
+    margin-bottom: 30px;
+  }
+  body section .container .form .input-box input {
+    font-size: 2rem;
+  }
+  body section .container .form .input-box input[type=submit] {
+    margin-bottom: 20px;
+    margin-left: 350px;
+  }
+  body section .container .form .input-box textarea {
+    width: 100%;
+    height: 200px;
+    font-size: 2rem;
+  }
+  body section .container .text {
+    font-size: 2rem;
+  }
+  body section .container .text .fa-face-laugh-wink,
+body section .container .text .fa-linkedin {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=contact.css.map */

@@ -470,90 +470,90 @@ body {
                 width: 100%;
                 height: 100%;
                 padding: 40px;
-            }
 
-            .form h2 {
-                position: relative;
-                font-family: $montserrat;
-                color: white;
-                text-shadow: $glow;
-                font-size: 4.8rem;
-                font-weight: 600;
-                letter-spacing: 1px;
-                margin-bottom: 40px;
-                text-align: center;
-            }
+                h2 {
+                    position: relative;
+                    font-family: $montserrat;
+                    color: white;
+                    text-shadow: $glow;
+                    font-size: 4.8rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
 
-            .form .input-box {
-                width: 100%;
-                margin-top: 20px;
-            }
+                .input-box {
+                    width: 100%;
+                    margin-top: 20px;
 
-            .form .input-box input {
-                width: 100%;
-                background: rgba(255, 255, 255, 0.2);
-                border: none;
-                outline: none;
-                padding: 10px 20px;
-                border-radius: 35px;
-                border: 1px solid rgb(255, 255, 255, 0.5);
-                border-right: 1px solid rgb(255, 255, 255, 0.2);
-                border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-                font-size: 16px;
-                letter-spacing: 1px;
-                color: white;
-                box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3), $glow;
-            }
+                    input {
+                        width: 100%;
+                        background: rgba(255, 255, 255, 0.2);
+                        border: none;
+                        outline: none;
+                        padding: 10px 20px;
+                        border-radius: 35px;
+                        border: 1px solid rgb(255, 255, 255, 0.5);
+                        border-right: 1px solid rgb(255, 255, 255, 0.2);
+                        border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+                        font-size: 1.7rem;
+                        letter-spacing: 1px;
+                        color: white;
+                        box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3), $glow;
 
-            .form .input-box textarea {
-                width: 315px;
-                height: 140px;
-                resize: none;
-                background: rgba(255, 255, 255, 0.2);
-                border: none;
-                outline: none;
-                padding: 10px 20px;
-                border-radius: 15px;
-                border: 1px solid rgb(255, 255, 255, 0.5);
-                border-right: 1px solid rgb(255, 255, 255, 0.2);
-                border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-                font-size: 16px;
-                letter-spacing: 1px;
-                color: white;
-                box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3), $glow;
-            }
+                        &::placeholder {
+                            font-family: $comfortaa;
+                            text-shadow: $glow;
+                            font-weight: 800;
+                            color: white;
+                        }
 
-            .form .input-box input::placeholder {
-                font-family: $comfortaa;
-                text-shadow: $glow;
-                font-weight: 800;
-                color: white;
-            }
+                        &[type="submit"] {
+                            background: white;
+                            font-family: $comfortaa;
+                            text-shadow: $glow;
+                            color: rgba(0, 0, 0, 0.6);
+                            max-width: 150px;
+                            cursor: pointer;
+                            margin-bottom: 20px;
+                            margin-left: 80px;
+                            font-weight: 800;
+                            transition: .3s ease-in-out;
 
-            .form .input-box textarea::placeholder {
-                font-family: $comfortaa;
-                font-weight: 800;
-                text-shadow: $glow;
-                color: white;
-            }
+                            &:hover {
+                                background: rgba(255, 255, 255, 0.2);
+                                color: #fff;
+                                font-weight: 600;
+                            }
+                        }
+                    }
 
-            .form .input-box input[type="submit"] {
-                background: white;
-                font-family: $comfortaa;
-                text-shadow: $glow;
-                color: rgba(0, 0, 0, 0.6);
-                max-width: 150px;
-                cursor: pointer;
-                margin-bottom: 20px;
-                margin-left: 80px;
-                font-weight: 800;
-                transition: .5s ease-in-out;
-            }
+                    textarea {
+                        width: 315px;
+                        height: 140px;
+                        resize: none;
+                        background: rgba(255, 255, 255, 0.2);
+                        border: none;
+                        outline: none;
+                        padding: 10px 20px;
+                        border-radius: 15px;
+                        border: 1px solid rgb(255, 255, 255, 0.5);
+                        border-right: 1px solid rgb(255, 255, 255, 0.2);
+                        border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+                        font-size: 1.7rem;
+                        letter-spacing: 1px;
+                        color: white;
+                        box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3), $glow;
 
-            .form .input-box input[type="submit"]:hover {
-                background: rgba(255, 255, 255, 0.2);
-                color: #fff;
-                font-weight: 600;
+                        &::placeholder {
+                            font-family: $comfortaa;
+                            font-weight: 800;
+                            text-shadow: $glow;
+                            color: white;
+                        }
+                    }
+                }
             }
 
             .text {
@@ -584,6 +584,94 @@ body {
                 }
             }
         }
+
+        // CONTACT FORM RESPONSIVITY START
+        @media (max-width: 400px) {
+            .container {
+                width: 300px;
+
+                .form {
+
+                    padding: 15px;
+
+                    h2 {
+                        font-size: 4rem;
+                        margin-bottom: 0;
+                    }
+
+                    .input-box {
+                        margin-top: 15px;
+
+                        input {
+                            font-size: 1.5rem;
+
+                            &[type="submit"] {
+                                margin-bottom: 2px;
+                                margin-left: 58px;
+                            }
+                        }
+
+                        textarea {
+                            width: 100%;
+                            height: 120px;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                .text {
+                    font-size: 1.2rem;
+
+                    .fa-face-laugh-wink,
+                    .fa-linkedin {
+                        margin-top: 2px;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .container {
+                width: 900px;
+
+                .form {
+                    h2 {
+                        font-size: 7rem;
+                        margin-bottom: 30px;
+                    }
+
+                    .input-box {
+                        input {
+                            font-size: 2rem;
+
+                            &[type="submit"] {
+                                margin-bottom: 20px;
+                                margin-left: 350px;
+                            }
+                        }
+
+                        textarea {
+                            width: 100%;
+                            height: 200px;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+
+                .text {
+                    font-size: 2rem;
+
+                    .fa-face-laugh-wink,
+                    .fa-linkedin {
+                        margin-top: 10px;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        // CONTACT FORM RESPONSIVITY END
     }
 
     // CONTACT FORM END
